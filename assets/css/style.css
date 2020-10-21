@@ -1,0 +1,256 @@
+body{/*background de body*/
+ color: white;
+ font-family: 'Dosis', sans-serif;
+ min-height: 100vh;
+ position: relative;
+ }
+ *{/*enlève tous les margins et padding*/
+ 	margin: 0;
+ 	padding: 0;
+ }
+ /*
+Couleur Principale: #EA5A0B // Orange
+Couleur Secondaire: #ffc961 -> #FFC107 // Jaune
+Dark : #343A40
+*/
+
+header.home {
+	background-image: url('../img/bg.jpg');
+	background-size: cover;
+	/*background-position: center;*/
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.menu{
+	display: flex;
+	max-height: 104px;
+	padding: 0 2em;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 99;
+	box-shadow: 0 5px 10px black;
+	background-color: rgba(52, 58, 64, 0.9);
+}
+a{
+	text-decoration: none;/*enlève le souslignement des liens*/
+}
+.logo{
+	/*min-width: 60px;
+	max-width: 60px;*/
+	display: flex;
+}
+
+.logo a:nth-child(1) {
+	min-width: 60px;
+	max-width: 60px;
+	margin: auto 0;
+	display: flex;
+}
+
+.logo a:nth-child(2) {
+	color: white;
+	margin: auto 0;
+	color: #FFC107;
+}
+
+.logo img{
+	width: 100%;
+	margin: auto 0;
+}
+.menu ul li a{
+	color: white;
+}
+.menu ul{
+	list-style-type: none;
+	display: flex;
+	/*width: 100%;*/
+	margin-left: auto;
+	justify-content: flex-end;
+	align-content: space-around;
+	flex-wrap: wrap;
+}
+.menu ul li{
+	padding: 1em 2em;
+	border-top: 3px solid transparent;
+}
+.menu ul li:hover{
+	border-top: 3px solid #FFC107;
+}
+.dropdown-content{
+  	display: none;/*cache l'élément*/
+  	position: absolute;
+  	box-shadow: 0 5px 10px black;
+	background-color: rgba(52, 58, 64, 0.9);
+  	z-index: 1;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.menu ul li.dropdown div.dropdown-content a{
+	color: white;
+}
+.menu ul li.dropdown div.dropdown-content div{
+	padding: .7em;
+}
+.menu ul.mobile_menu{
+	display: none;
+}
+
+
+.homeTitle{
+	position: relative;
+	top:30%;
+	background-color: #343A40;
+	width: 70%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.ban{
+	display: flex;
+}
+.ban h1{
+	margin: auto;
+	padding: 0 20px;
+	background-color:  rgba(52, 58, 64, 0.9);
+}
+main{
+	padding: 4em;
+}
+.yellow_button{
+	background-color: #FFC107;
+	border: 0;
+	padding: .5em 1em;
+	font-size: 1.5em;
+	margin: auto;
+	border-radius: 15px;
+	box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.9);
+	transition: 300ms;
+	margin-top: 25%;
+	display: block;
+}
+
+.yellow_button:hover {
+	cursor: pointer;
+	background-color: #E0A800;
+}
+
+.yellow_button a{
+	color: white;
+}
+.card{
+	padding: 2em;	
+	border-radius: 10px;
+	width: 18rem;
+	margin-bottom: 2em;
+}
+.card-header{
+	width: 100px;
+	margin: auto;
+
+}
+.card-header img{
+	border-radius: 50%;
+}
+.title{
+	margin: 1em 0;
+	margin-top: 2em;
+}
+.card-content{
+	padding-top: 1em;
+}
+footer {
+	text-align: center;
+	padding: 20px;
+	color: black;
+	
+}
+
+#photoDiv{
+	width: 20%;
+}
+
+
+@media screen and (max-width: 640px){
+	#photoDiv{
+		width: 50%;
+	}
+	.menu ul{
+		display: none;
+	}
+	.menu ul.mobile_menu{
+		display: flex;
+	}
+	.menu_burger{
+		margin: auto;
+	}
+	.dropdown-content-mobile{
+		display: none;
+		position: absolute;
+		right: 0;
+		z-index: 99;
+		box-shadow: 0 5px 10px black;
+		background-color: rgba(52, 58, 64, 0.9);
+	}
+	.dropdown-content-mobile a{
+		color: white;
+		list-style-type: none;
+	}
+	/*.menu_burger:hover .dropdown-content-mobile {
+	  display: block;
+	}*/
+	.dropdown-content-mobile div{
+	padding: .7em;
+	}
+	main{
+		padding: 1em;
+	}
+	.yellow_button{
+		margin-top: 65%;
+		width: 70%;
+		font-size: 22px;
+	}
+	.homeTitle{
+		width: 90%;
+	}
+	
+}
+
+/* --- LOADER --- */
+
+.loader {
+  border: 16px solid #343A40;
+  border-radius: 50%;
+  border-top: 16px solid #FFC107;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* --- END LOADER --- */
+
+#loaderContainer {
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.8);
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+

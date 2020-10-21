@@ -1,0 +1,151 @@
+/* --- Helpers --- */
+
+/* - Graphical Charter - */
+
+.bg-dark {
+	background-color: #343A40;
+}
+
+.text-dark {
+	color: #343A40;
+}
+
+.bg-yellow {
+	background-color: #FFC107;
+}
+
+.text-yellow {
+	color: #FFC107;
+}
+
+.bg-orange {
+	background-color: #EA5A0B;
+}
+
+.text-orange {
+	color: #EA5A0B;
+}
+.bg-gray{
+	background-color: #6C757D;
+}
+.text-gray{
+	color:  #6C757D;
+}
+
+.btn-yellow {
+	font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 1px solid #FFC107;
+    background-color: #FFC107;
+    color: #343A40;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+}
+
+.btn-yellow:hover {
+	cursor: pointer;
+}
+
+.btn-link {
+	font-weight: 400;
+    text-align: center;
+    background-color: transparent;
+    color: white;
+    white-space: nowrap;
+    vertical-align: middle;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    border-width: 0px;
+}
+
+.btn-link:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+/* - Dimensions - */
+
+.h-100 {
+	height: 100%;
+}
+
+.w-50 {
+	width: 50%;
+}
+
+.w-100{
+	width: 100%;
+}
+.justify-around{
+	justify-content: space-around;
+}
+.flex-wrap{
+	flex-wrap: wrap; /*Retour a la ligne*/
+}
+/*- Text helpers -*/
+.font-courier{
+	font-family: 'courier new' !important;
+}
+
+.font-bold{
+	font-weight: bold;
+}
+
+.text-center{
+	text-align: center;
+}
+
+/*Display helpers*/
+
+.d-block {
+	display: block !important;
+}
+
+.d-none {
+	display: none !important;
+}
+
+/*Flex helpers*/
+
+.d-flex{
+	display: flex;
+}
+
+/* Margin */
+
+.mx-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.m-auto {
+	margin: auto;
+}
+
+/* Forms */
+
+.form-group {
+	margin: 20px 0;
+}
+
+.form-control {
+	padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+
+.cursor-pointer {
+	cursor: pointer;
+}
+
+.position-relative {
+	position: relative;
+}

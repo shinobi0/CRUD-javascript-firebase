@@ -1,0 +1,19 @@
+body{/*background de body*/
+ background-color: #151515;
+ }
+ *{/*enlève tous les margins et padding*/
+ 	margin: 0;
+ 	padding: 0;
+ }
+
+.menu ul li a{
+	text-decoration: none;/*enlève le souslignement des liens*/
+}
+.menu ul{
+	list-style-type: none;/*enlève les puces des listes*/
+}
+overflow-y: hidden; /*cache sur l'axe y(haut et bas) tout ce qui dépasse*/
+
+border-top: 3px solid #151515;border doit contenir 3 valeurs: epaisseus du trait couleur et type de trait
+
+ display: none;/*cache l'élément*/

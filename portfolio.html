@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-100">
+<head>
+	<meta charset="utf-8">
+	<title>lecodeparfait</title>
+	<!-- link css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/helpers.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/signUp.css">
+	<!-- meta viewport pour responsive -->
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+
+	<!-- signature page -->
+	<META NAME="Author" CONTENT="Collectif Game of Code">
+	<!-- font dosis -->
+	<link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+	<!-- template codepen -->
+	<link
+	  rel="stylesheet"
+	  href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+	  integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+	  crossorigin="anonymous"
+	/>
+	<link
+	  href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap"
+	  rel="stylesheet"
+	/>
+	<link
+	  href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap"
+	  rel="stylesheet"
+	/>
+	<!-- Lien javascript -->
+
+	<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  	<script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-app.js"></script>
+
+  	<!-- Add Firebase products that you want to use -->
+  	<script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-auth.js"></script>
+  	<script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-database.js"></script>
+  	<script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-storage.js"></script>
+
+  	<script src="assets/js/config.js"></script>
+
+  	<script src="assets/js/auth.js"></script>
+
+  	<script src="assets/js/portfolio.js"></script>
+
+	<script type="text/javascript" src="assets/js/script.js"></script>
+    <script type="text/javascript" src="assets/js/users.js"></script>
+
+
+<!-- css du portfolio -->
+  <link rel="stylesheet" type="text/css" href="assets/css/portStyle.css">
+</head>
+<body class="bg-dark h-100">
+	<header>
+		<nav class="menu">
+			<div class="logo">
+				<a href="./index.html">
+					<img src="assets/img/logo.png" alt="logo">
+				</a>
+				<a href="./index.html">Le Code Parfait</a>
+			</div>
+			<ul>
+				<li>
+					<a href="./profils.html">Profils</a><!-- lien vers une autre page html en local -->
+				</li>
+				<li class="dropdown">
+					Compte <i class="fas fa-sort-down"></i>
+					<div class="dropdown-content">
+						<div class="signInBtn">
+							<a href="signIn.html">Connexion</a>
+						</div>
+						<div class="signUpBtn">
+							<a href="signUp.html">Inscription</a>
+						</div>
+						<div class="signOutBtn">
+							<a href="#">Deconnexion</a>
+						</div>
+						<div class="accountBtn">
+							<a href="account.html">Mon Compte</a>
+						</div>
+					</div>
+				</li>
+				<li>About</li>
+			</ul>
+			<ul class="mobile_menu">
+				<div class="menu_burger">
+					<i class="fas fa-hamburger fa-3x"></i>
+					<div class="dropdown-content-mobile">
+						<div class="signInBtn">
+							<a href="signIn.html">Connexion</a>
+						</div>
+						<div class="signUpBtn">
+							<a href="signUp.html">Inscription</a>
+						</div>
+						<div class="signOutBtn">
+							<a href="#">Deconnexion</a>
+						</div>
+						<div class="accountBtn">
+							<a href="account.html">Mon Compte</a>
+						</div>
+					</div>
+				</div>
+			</ul>
+		</nav>
+	</header>
+
+<main>
+<section id="welcome-section" class="welcome-section">
+  <div id="photoDiv">
+    <img id="photoProfile">
+    
+  </div>
+  <h1>Hey I am <span id="name">Harrison</span></h1>
+  <p>Your <span id="job">web developer</span></p>
+  <p>En <span id="contract">CDI</span></p>
+</section>
+
+<!-- END WELCOME SECTION -->
+<!-- START SKILLS SECTION -->
+<section>
+  <div id="description">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </div>
+<div id="skills"></div>
+  <div class="contact-links skillsList">
+    <a href="#" id="htmlImg" target="_blank" class="btn contact-details d-none"><img src="assets/img/logo_HTML.jpg"></a>
+    <a href="#" id="bootstrapImg" target="_blank" class="btn contact-details d-none"><img src="assets/img/logo_BOOTSTRAP.jpg"></a>
+    <a href="#" id="firebaseImg" target="_blank" class="btn contact-details d-none"><img src="assets/img/logo_FIREBASE.jpg"></a>
+    <a href="#" id="phpImg" target="_blank" class="btn contact-details d-none"><img src="assets/img/logo_PHP.jpg"></a>
+    <a href="#" id="jsImg" target="_blank" class="btn contact-details d-none"><img src="assets/img/logo_JS.jpg"></a>
+    <a href="#" id="mysqlImg" target="_blank" class="btn contact-details d-none"><img src="assets/img/logo_MYSQL.jpg"></a>
+    <a href="#" id="jqueryImg" target="_blank" class="btn contact-details d-none"><img src="assets/img/logo_JQUERY.jpg"></a>
+  </div>
+</section>
+
+
+
+
+
+<!-- END SKILLS SECTION -->
+
+<!-- START CONTACT SECTION -->
+
+<section id="contact" class="contact-section">
+  <div class="contact-section-header">
+    <h2>Let's work together...</h2>
+    <p>How do you take your coffee?</p>
+  </div>
+  <div>
+    <p><span id="address">12 rue du code</span></p>
+    <p><span id="zipCode">75001</span> <span id="town">Paris</span></p>
+    <p>
+      <a href="tel:+336 22 22 22 22" id="phone">+336 22 22 22 22</a>
+    </p>
+  </div>
+  <div class="contact-links">
+    <a
+      href="https://facebook.com/freecodecamp"
+      target="_blank"
+      class="btn contact-details d-none"
+      id="facebookLink"
+      ><i class="fab fa-facebook-square"></i> Facebook</a
+    >
+    <a
+      id="profile-link"
+      href="https://github.com/freecodecamp"
+      target="_blank"
+      class="btn contact-details d-none"
+      ><i class="fab fa-linkedin"></i> LinkedIn</a
+    >
+    <a
+      id="twitterLink"
+      href="https://twitter.com/freecodecamp"
+      target="_blank"
+      class="btn contact-details d-none"
+      ><i class="fab fa-twitter"></i> Twitter</a
+    >
+    <a class="btn contact-details d-none" target="_blank" href="#" id="websiteLink">
+      <i class="fas fa-link"></i> Site web
+    </a>
+    <a href="mailto:example@example.com" id="emailLink" class="btn contact-details d-none"
+      ><i class="fas fa-at"></i> Send a mail</a
+    >
+    <a href="tel:555-555-5555" id="phoneLink" class="btn contact-details d-none"
+      ><i class="fas fa-mobile-alt"></i> Call me</a
+    >
+  </div>
+  <form id="contactForm">
+    <label for="inputName">Nom</label>
+    <input type="text" name="inputName" id="inputName">
+    <label for="inputPrenom">Prénom</label>
+    <input type="text" name="inputprenom" id="inputprenom">
+    <label for="message">Message</label>
+    <textarea id="message" rows="5"></textarea>
+    <input type="submit" name="emailSender" id="emailSender">
+  </form>
+</section>
+
+<!-- END CONTACT SECTION -->
+<!-- START PROJECTS SECTION -->
+
+<section id="projects" class="projects-section">
+  <h2 class="projects-section-header">These are some of my projects</h2>
+
+  <div class="projects-grid">
+    <a
+      href="#"
+      target="_blank"
+      class="project project-tile"
+    >
+      <img
+        class="project-image"
+        src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/images/tribute.jpg"
+        alt="project"
+      />
+      <p class="project-title">
+        <span class="code">&lt;</span>
+        Tribute Page
+        <span class="code">&#47;&gt;</span>
+      </p>
+    </a>
+    <a
+      href="#"
+      target="_blank"
+      class="project project-tile"
+    >
+      <img
+        class="project-image"
+        src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/images/random-quote-machine.png"
+        alt="project"
+      />
+      <p class="project-title">
+        <span class="code">&lt;</span>
+        Random Quote Machine
+        <span class="code">&#47;&gt;</span>
+      </p>
+    </a>
+    <a
+      href="#"
+      target="_blank"
+      class="project project-tile"
+    >
+      <img
+        class="project-image"
+        src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/images/calc.png"
+        alt="project"
+      />
+      <p class="project-title">
+        <span class="code">&lt;</span>
+        JavaScript Calculator
+        <span class="code">&#47;&gt;</span>
+      </p>
+    </a>
+    <a
+      href="#"
+      target="_blank"
+      class="project project-tile"
+    >
+      <img
+        class="project-image"
+        src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/images/map.jpg"
+        alt="project"
+      />
+      <p class="project-title">
+        <span class="code">&lt;</span>
+        Map Data Across the Globe
+        <span class="code">&#47;&gt;</span>
+      </p>
+    </a>
+    <a
+      href="#"
+      target="_blank"
+      class="project project-tile"
+    >
+      <img
+        class="project-image"
+        src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/images/wiki.png"
+        alt="project"
+      />
+      <p class="project-title">
+        <span class="code">&lt;</span>
+        Wikipedia Viewer
+        <span class="code">&#47;&gt;</span>
+      </p>
+    </a>
+    <a
+      href="#"
+      target="_blank"
+      class="project project-tile"
+    >
+      <img
+        class="project-image"
+        src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/images/tic-tac-toe.png"
+        alt="project"
+      />
+      <p class="project-title">
+        <span class="code">&lt;</span>
+        Tic Tac Toe Game
+        <span class="code">&#47;&gt;</span>
+      </p>
+    </a>
+  </div>
+
+  <a
+    href="#"
+    class="btn btn-show-all"
+    target="_blank"
+    >Show all<i class="fas fa-chevron-right"></i
+  ></a>
+</section>
+
+<!-- END PROJECTS SECTION -->
+
+	<div id="downloadCV">
+    <a href="assets/img/map.png" id="resumeLink" target="_blank">
+      <p>Mon CV</p>
+      <i class="fas fa-file-download fa-3x"></i>
+    </a>
+    
+  </div>
+</main>
+<!-- START FOOTER SECTION -->	
+	<footer class="bg-yellow">
+		<small>&copy; Game of Code - 2019 - <a href="#">Mention légales</a></small>
+	</footer>
+  <div class="d-flex" id="loaderContainer">
+    <div class="loader m-auto"></div>
+  </div>
+</body>
+</html>

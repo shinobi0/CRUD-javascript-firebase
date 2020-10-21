@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-100">
+<head>
+	<meta charset="utf-8">
+	<title>lecodeparfait</title>
+	<!-- link css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/helpers.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<!-- meta viewport pour responsive -->
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<!-- font awesome -->
+	<script src="https://kit.fontawesome.com/a5ce9eb236.js"></script>
+	<!-- signature page -->
+	<META name="Author" content="Collectif Game of Code">
+	<!-- font dosis -->
+	<link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- Lien javascript -->
+
+	<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  	<script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-app.js"></script>
+
+  	<!-- Add Firebase products that you want to use -->
+  	<script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-auth.js"></script>
+  	<script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-database.js"></script>
+  	<script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-storage.js"></script>
+
+  	<script src="assets/js/config.js"></script>
+
+  	<script src="assets/js/auth.js"></script>
+
+	<script type="text/javascript" src="assets/js/script.js"></script>
+</head>
+<body class="h-100 bg-dark">
+	<header>
+		<nav class="menu">
+			<div class="logo">
+				<a href="./index.html">
+					<img src="assets/img/logo.png" alt="logo">
+				</a>
+				<a href="#">Le Code Parfait</a>
+			</div>
+			<ul>
+				<li>
+					<a href="./profils.html">Profils</a><!-- lien vers une autre page html en local -->
+				</li>
+				<li class="dropdown">
+					Compte <i class="fas fa-sort-down"></i>
+					<div class="dropdown-content">
+						<div class="signInBtn">
+							<a href="signIn.html">Connexion</a>
+						</div>
+						<div class="signUpBtn">
+							<a href="signUp.html">Inscription</a>
+						</div>
+						<div class="signOutBtn">
+							<a href="#">Deconnexion</a>
+						</div>
+						<div class="accountBtn">
+							<a href="account.html">Mon Compte</a>
+						</div>
+					</div>
+				</li>
+				<li>About</li>
+			</ul>
+			<ul class="mobile_menu">
+				<div class="menu_burger">
+					<i class="fas fa-hamburger fa-3x"></i>
+					<div class="dropdown-content-mobile">
+						<div class="signInBtn">
+							<a href="signIn.html">Connexion</a>
+						</div>
+						<div class="signUpBtn">
+							<a href="signUp.html">Inscription</a>
+						</div>
+						<div class="signOutBtn">
+							<a href="#">Deconnexion</a>
+						</div>
+						<div class="accountBtn">
+							<a href="account.html">Mon Compte</a>
+						</div>
+					</div>
+				</div>
+			</ul>
+		</nav>
+	</header>
+	<main class="h-100">
+		
+		<h1 class="title">Connexion</h1>
+
+		<div class="w-50 mx-auto">
+			
+			<form>
+				<div class="form-group">
+					<label for="email" class="w-100">Email</label>
+					<input type="email" class="w-100 form-control" id="signInEmail" name="email" placeholder="example@example.com">
+				</div>
+
+				<div class="form-group">
+					<label for="password" class="w-100">Mot de passe</label>
+					<input type="password" class="w-100 form-control" id="signInPassword" name="password" placeholder="Entrez votre mot de passe">
+				</div>
+
+				<button class="btn-yellow" id="signInSubmit" type="button">Connexion</button>
+
+				<button class="btn-link" id="forgottenPassword" type="button">Mot de passe oublié</button>
+			</form>
+
+		</div>
+
+	</main>
+	<footer class="bg-yellow">
+		<small>&copy; Game of Code - 2019 - <a href="#">Mention légales</a></small>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,78 @@
+.container{
+	/*border: 2px solid red;*/
+	max-width: 85%; 
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.containercontent{
+	margin-top: 1em;
+	margin-bottom: 1em;
+	display: flex;
+	align-items: center;
+	max-width: 95%;
+}
+
+.imgphotoprofil{
+	width: 10%;
+	border-radius: 50%;
+	margin-left: 3%;
+}
+
+.imputchoixpdf{
+	background-color: #fff;
+	border-radius: .25rem;
+	padding: .375rem .75rem;
+	color: #495057;
+}
+
+.imputform{
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+
+.divimput{
+	padding-right: 3%;
+    padding-left: 3%;
+}
+
+.divtaille8{
+	flex: 0 0 66%
+}
+
+.divtaille4{
+	flex: 0 0 30%
+}
+
+.divtaille2{
+	flex: 0 0 15%
+}
+
+.containerbtnvalider{
+	justify-content: flex-end;
+}
+
+.containerparti{
+	/*border: 2px solid blue;*/
+}
+
+textarea{
+	width: 100%;
+	font-family: inherit;
+	font-family: Arial;
+	font-size: 1em;
+	padding: .375rem .75rem;
+}
+
+.divcheckboxlabel{
+	display: flex;
+}
+
+.divbtnvalider a {
+	color: whitesmoke;
+	text-decoration: none;
+}

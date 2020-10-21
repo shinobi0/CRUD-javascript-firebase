@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-100">
+<head>
+	<meta charset="utf-8">
+	<title>lecodeparfait</title>
+	<!-- link css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/helpers.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/signup.css">
+	<!-- meta viewport pour responsive -->
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+
+	<!-- signature page -->
+	<META NAME="Author" CONTENT="Collectif Game of Code">
+	<!-- font dosis -->
+	<link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<!-- Lien javascript -->
+
+	<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  	<script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-app.js"></script>
+
+  	<!-- Add Firebase products that you want to use -->
+  	<script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-auth.js"></script>
+  	<script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-database.js"></script>
+  	<script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-storage.js"></script>
+
+  	<script src="assets/js/config.js"></script>
+
+  	<script src="assets/js/auth.js"></script>
+
+
+	<script type="text/javascript" src="assets/js/script.js"></script>
+</head>
+<body class="bg-dark">
+	<header class="h-100">
+		<nav class="menu">
+			<div class="logo">
+				<a href="./index.html">
+					<img src="assets/img/logo.png" alt="logo">
+				</a>
+				<a href="#">Le Code Parfait</a>
+			</div>
+		<ul>
+				<li>
+					<a href="./profils.html">Profils</a><!-- lien vers une autre page html en local -->
+				</li>
+				<li class="dropdown">
+					Compte <i class="fas fa-sort-down"></i>
+					<div class="dropdown-content">
+						<div class="signInBtn">
+							<a href="signIn.html">Connexion</a>
+						</div>
+						<div class="signUpBtn">
+							<a href="signUp.html">Inscription</a>
+						</div>
+						<div class="signOutBtn">
+							<a href="#">Deconnexion</a>
+						</div>
+						<div class="accountBtn">
+							<a href="account.html">Mon Compte</a>
+						</div>
+					</div>
+				</li>
+				<li>About</li>
+			</ul>
+			<ul class="mobile_menu">
+				<div class="menu_burger">
+					<i class="fas fa-hamburger fa-3x"></i>
+					<div class="dropdown-content-mobile">
+						<div class="signInBtn">
+							<a href="signIn.html">Connexion</a>
+						</div>
+						<div class="signUpBtn">
+							<a href="signUp.html">Inscription</a>
+						</div>
+						<div class="signOutBtn">
+							<a href="#">Deconnexion</a>
+						</div>
+						<div class="accountBtn">
+							<a href="account.html">Mon Compte</a>
+						</div>
+					</div>
+				</div>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+			<div class="container containerglobal">
+				<form class="formulaire" id="signUpForm">
+					<div class="container containercontent containerphoto">
+						<img src="assets/img/profil.png" alt="photo profil" class="imgphotoprofil">
+						<div class="divimput divchoiximg divtaille4">
+							<input type="file" class="imputform imputchoixpdf" accept="image/*" id="signUpProfileImg">
+						</div>
+					</div>
+					<div class="containerparti">
+						<div class="container containercontent">
+							<h2 class="divimput">Mes Informations Personnelles</h2>
+						</div>
+						<div class="container containercontent containernomprenom">
+							<div class="divimput divnom divtaille4">
+								<input type="text" class="imputform" placeholder="Nom" id="signUpLastname">
+							</div>
+							<div class="divimput divprenom divtaille4">
+								<input type="text" class="imputform" placeholder="Prénom" id="signUpFirstname">
+							</div>
+						</div>
+						<div class="container containercontent containervilleCP">
+							<div class="divimput divville divtaille4">
+								<input type="text" class="imputform" placeholder="Ville" id="signUpCity">
+							</div>
+							<div class="divimput divCP divtaille4">
+								<input type="text" class="imputform" placeholder="Code Postal" id="signUpZip">
+							</div>
+						</div>
+						<div class="container containercontent containeremailmdp">
+							<div class="divimput divemail divtaille4">
+								<input type="email" class="imputform" placeholder="Email" id="signUpEmail">
+							</div>
+							<div class="divimput divmdp divtaille4">
+								<input type="password" class="imputform" placeholder="Mot de passe (8 caractères minimum)" minlength="8" id="signUpPassword">
+							</div>
+						</div>
+						<div class="container containercontent containernumtel">
+							<div class="divimput divnumtel divtaille4">
+								<input type="tel" class="imputform" placeholder="Numéro téléphone" pattern="((\+)33|0)[1-9](\d{2}){4}" id="signUpPhone">
+							</div>
+						</div>
+					</div>
+
+					<div class="containerparti">
+						<div class="container containercontent">
+							<h2 class="divimput">Mon Profil</h2>
+						</div>
+						<div class="container containercontent containercv">
+							<div class="divimput divcv divtaille4">
+								CV
+								<input type="file" class="imputform imputchoixpdf" accept=".pdf" id="signUpResume">
+							</div>
+						</div>
+						<div class="container containercontent containermetier">
+							<div class="divimput divmetier divtaille8">
+								<input type="text" class="imputform" placeholder="Titre du poste recherché" id="signUpJob">
+							</div>
+						</div>
+						<div class="container containercontent containerpresentation">
+							<div class="divimput divpresentation divtaille8">
+								<textarea cols="20" rows="7" placeholder="Présentez votre parcours et vos expériences" wrap="hard" id="signUpDescription"></textarea>
+							</div>
+						</div>
+						<div class="containercontrat">
+							<div class="container containercontent ">
+								<div class="divimput">
+									<h3>Type de contrat recheché</h3>
+								</div>
+							</div>
+							<div class="container containercontent ">
+								<div class="divimput divcheckboxlabel">
+									<label for="category_title1">Stage</label>
+									<input type="checkbox" class="checkbox" id="category_title1" value="Stage" name="signUpContractType">
+								</div>
+							</div>
+							<div class="container containercontent ">
+								<div class="divimput divcheckboxlabel">
+									<label for="category_title2">CDD</label>
+									<input type="checkbox" id="category_title2" value="CDD" name="signUpContractType">
+								</div>
+							</div>
+							<div class="container containercontent ">
+								<div class="divimput divcheckboxlabel">
+									<label for="category_title3">CDI</label>
+									<input type="checkbox" id="category_title3" value="CDI" name="signUpContractType">
+								</div>
+							</div>
+							<div class="container containercontent ">
+								<div class="divimput divcheckboxlabel">
+									<label for="category_title4">Freelance</label>
+									<input type="checkbox" id="category_title4" name="signUpContractType" value="Freelance">
+								</div>
+							</div>
+							<div class="container containercontent ">
+								<div class="divimput divcheckboxlabel">
+									<label for="category_title5">Alternance</label>
+									<input type="checkbox" id="category_title5" value="alternance" name="signUpContractType">
+								</div>
+							</div>
+						</div>
+						<div class="containercompetence">
+							<div class="container containercontent ">
+								<div class="divimput">
+									<h3>Compétences</h3>
+								</div>
+							</div>
+							<div class="container containercontent ">
+								<div class="divimput divcheckboxlabel">
+									<label for="skill1">HTML/CSS</label>
+									<input type="checkbox" class="checkbox" id="skill1" value="HTML/CSS" name="signUpSkills">
+								</div>
+							</div>
+							<div class="container containercontent ">
+								<div class="divimput divcheckboxlabel">
+									<label for="skill2">Javascript</label>
+									<input type="checkbox" id="skill2" value="Javascript" name="signUpSkills">
+								</div>
+							</div>
+							<div class="container containercontent ">
+								<div class="divimput divcheckboxlabel">
+									<label for="skill3">PHP</label>
+									<input type="checkbox" id="skill3" value="PHP" name="signUpSkills">
+								</div>
+							</div>
+							<div class="container containercontent ">
+								<div class="divimput divcheckboxlabel">
+									<label for="skill4">MySQL</label>
+									<input type="checkbox" id="skill4" value="MySQL" name="signUpSkills">
+								</div>
+							</div>
+							<div class="container containercontent ">
+								<div class="divimput divcheckboxlabel">
+									<label for="skill5">Angular</label>
+									<input type="checkbox" id="skill5" value="Angular" name="signUpSkills">
+								</div>
+							</div>
+							<div class="container containercontent ">
+								<div class="divimput divcheckboxlabel">
+									<label for="skill6">jQuery</label>
+									<input type="checkbox" id="skill6" value="jQuery" name="signUpSkills">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="containerparti">
+						<div class="container containercontent">
+							<h2 class="divimput">Mes Réseaux</h2>
+						</div>
+						<div class="container containercontent containerurlportfolio">
+							<div class="divimput divurlportfolio divtaille8">
+								<input type="text" class="imputform" placeholder="URL site perso/portfolio" id="signUpWebsiteUrl">
+							</div>
+						</div>
+						<div class="container containercontent containerlinkedin">
+							<div class="divimput divlinkedin divtaille8">
+								<input type="text" class="imputform" placeholder="URL Profil Linkedin" id="signUpLinkedInUrl">
+							</div>
+						</div>
+						<div class="container containercontent containerfacebook">
+							<div class="divimput divfacebook divtaille8">
+								<input type="text" class="imputform" placeholder="URL Profil Facebook" id="signUpFacebookUrl">
+							</div>
+						</div>
+					</div>
+
+					<div class="container containercontent containerbtnvalider">
+						<div class="divimput divbtnvalider divtaille2">
+							<!-- <input type="button" class="imputform" value="S'inscrire"> -->
+							<button class="imputform" type="button" id="signUpSubmit">
+								S'inscrire
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</main>
+	
+	<footer class="bg-yellow">
+		<small>&copy; Game of Code - 2019 - <a href="#">Mention légales</a></small>
+	</footer>
+</body>
+</html>
